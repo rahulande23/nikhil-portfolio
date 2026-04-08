@@ -1837,6 +1837,40 @@ footer {
   background: rgba(232, 212, 77, 0.05);
 }
 
+/* ═══════════════════════════════════════════════
+   DESKTOP REFINEMENTS (> 1024px)
+═══════════════════════════════════════════════ */
+@media (min-width: 1025px) {
+  .nav-hamburger {
+    display: none !important;
+  }
+  .mobile-menu {
+    display: none !important;
+  }
+
+  /* Tighter hero padding on mid-size desktops */
+  .hero-left {
+    padding: 60px 48px 60px 64px;
+  }
+
+  /* Work grid — landscape card full width, portraits 3-col */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .project-card.landscape-card {
+    grid-column: span 3;
+  }
+  .project-card.portrait-card {
+    grid-column: span 1;
+  }
+
+  /* Process 4-col */
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* ── HAMBURGER BUTTON (hidden on desktop) ── */
 .nav-hamburger {
   display: none;
@@ -1928,6 +1962,7 @@ footer {
    RESPONSIVE — MOBILE (768px and below)
 ═══════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  /* ── CURSOR ── */
   .cursor {
     display: none !important;
   }
@@ -1935,11 +1970,15 @@ footer {
     cursor: auto;
   }
 
+  /* ── NAV ── */
   nav {
     padding: 14px 20px;
+    background: rgba(8, 8, 8, 0.95);
+    backdrop-filter: blur(12px);
   }
   .nav-logo {
-    font-size: 18px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
   }
   .nav-links {
     display: none;
@@ -1954,181 +1993,259 @@ footer {
     display: flex;
   }
 
+  /* ── HERO ── */
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 80px;
-    min-height: auto;
+    padding-top: 72px;
+    min-height: 100svh;
   }
   .hero-right {
     display: none;
   }
   .hero-left {
-    padding: 40px 20px 60px;
+    padding: 36px 20px 56px;
+    justify-content: flex-start;
+  }
+  .hero-tag {
+    font-size: 10px;
+    margin-bottom: 16px;
   }
   .hero-title {
-    font-size: clamp(56px, 16vw, 80px);
-    margin-bottom: 20px;
+    font-size: clamp(60px, 17vw, 88px);
+    line-height: 0.88;
+    margin-bottom: 18px;
   }
   .hero-desc {
     font-size: 14px;
+    line-height: 1.65;
     margin-bottom: 28px;
     max-width: 100%;
+    color: #8a8578;
   }
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
   }
   .btn-primary {
     justify-content: center;
-    padding: 16px 24px;
-    min-height: 44px;
+    padding: 15px 24px;
+    min-height: 48px;
+    font-size: 11px;
   }
   .btn-secondary {
     text-align: center;
-    min-height: 44px;
+    min-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid rgba(245, 242, 235, 0.15);
   }
   .hero-stats {
-    gap: 24px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 36px;
+    padding-top: 24px;
+  }
+  .hero-stats > div {
+    padding: 0 12px;
+    border-right: 1px solid rgba(245, 242, 235, 0.08);
+  }
+  .hero-stats > div:first-child {
+    padding-left: 0;
+  }
+  .hero-stats > div:last-child {
+    border-right: none;
   }
   .stat-num {
-    font-size: 32px;
+    font-size: 30px;
+  }
+  .stat-label {
+    font-size: 9px;
   }
   .floating-tag {
     display: none;
   }
 
-  section {
-    padding: 60px 20px;
+  /* ── MARQUEE ── */
+  .marquee-item {
+    font-size: 11px;
+    padding: 0 16px;
+    gap: 16px;
   }
 
+  /* ── SECTIONS (global) ── */
+  section {
+    padding: 56px 20px;
+  }
+
+  /* ── ABOUT ── */
   .about {
     grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 60px 20px;
+    gap: 32px;
+    padding: 56px 20px;
   }
   .about-portrait {
     max-width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/2;
   }
   .about-text {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 32px;
   }
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin-bottom: 32px;
   }
   .skill-chip {
     min-height: 44px;
     display: flex;
     align-items: center;
+    font-size: 9px;
+    padding: 10px 12px;
   }
   .awards-row {
-    flex-direction: column;
-    gap: 16px;
+    flex-direction: row;
+    gap: 0;
+    padding-top: 24px;
+  }
+  .award-item {
+    flex: 1;
+    padding: 0 12px;
+    border-right: 1px solid rgba(245, 242, 235, 0.08);
+  }
+  .award-item:first-child {
+    padding-left: 0;
+  }
+  .award-item:last-child {
+    border-right: none;
+  }
+  .award-name {
+    font-size: 15px;
   }
 
+  /* ── WORK ── */
+  .work {
+    padding: 56px 20px;
+  }
   .work-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: 12px;
+    margin-bottom: 28px;
   }
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
   }
-  .project-card.landscape-card,
+  .project-card.landscape-card {
+    grid-column: span 2;
+  }
   .project-card.portrait-card {
     grid-column: span 1;
-  }
-  .card-visual--portrait {
-    aspect-ratio: unset;
-    height: 420px;
-    position: relative;
-  }
-  .card-visual--portrait iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
   }
   .card-visual--landscape {
     aspect-ratio: 16/9;
   }
+  .card-visual--portrait {
+    aspect-ratio: unset;
+    height: 280px;
+    position: relative;
+  }
+  .card-visual--portrait iframe,
+  .card-visual--landscape iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .card-title-sm {
+    font-size: 16px;
+  }
+  .card-info {
+    padding: 10px 14px;
+  }
 
+  /* ── REEL ── */
   .reel-section {
-    padding: 60px 20px;
+    padding: 56px 20px;
+    text-align: center;
   }
   .reel-player {
-    margin-top: 32px;
+    margin-top: 28px;
     max-width: 100%;
+    aspect-ratio: 16/9;
   }
 
+  /* ── PROCESS ── */
   .process {
-    padding: 60px 20px;
+    padding: 56px 20px;
   }
   .process-grid {
     grid-template-columns: 1fr;
-    margin-top: 32px;
+    gap: 2px;
+    margin-top: 28px;
   }
   .process-step {
-    padding: 28px 20px;
+    padding: 24px 20px;
   }
   .step-num {
-    font-size: 48px;
+    font-size: 44px;
+    margin-bottom: 12px;
+  }
+  .step-title {
+    font-size: 22px;
   }
   .step-desc {
-    font-size: 14px;
+    font-size: 13px;
   }
 
+  /* ── SECTION TITLES ── */
   .section-title {
-    font-size: clamp(40px, 11vw, 60px);
+    font-size: clamp(38px, 10vw, 56px);
   }
 
+  /* ── CONTACT ── */
   .contact {
-    padding: 60px 20px;
+    padding: 56px 20px;
   }
   .contact-title {
-    font-size: clamp(36px, 12vw, 56px);
-    margin: 24px 0;
+    font-size: clamp(34px, 11vw, 52px);
+    margin: 20px 0;
   }
   .contact-email {
-    font-size: 10px;
+    font-size: 9px;
     padding: 14px 16px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     overflow-wrap: break-word;
     word-break: break-all;
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    display: block;
   }
   .contact-socials {
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
   .social-link {
     min-height: 44px;
     display: flex;
     align-items: center;
+    font-size: 10px;
   }
 
+  /* ── FOOTER ── */
   footer {
     padding: 20px;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     text-align: center;
-  }
-
-  .marquee-item {
-    font-size: 11px;
-    padding: 0 16px;
-    gap: 16px;
   }
 }
 
@@ -2137,25 +2254,34 @@ footer {
 ═══════════════════════════════════════════════ */
 @media (max-width: 480px) {
   .hero-title {
-    font-size: clamp(48px, 18vw, 64px);
-  }
-  .stat-num {
-    font-size: 28px;
+    font-size: clamp(52px, 18vw, 72px);
   }
   .hero-stats {
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stat-num {
+    font-size: 26px;
+  }
+  .stat-label {
+    font-size: 8px;
   }
   .section-title {
-    font-size: clamp(36px, 12vw, 48px);
+    font-size: clamp(34px, 11vw, 44px);
   }
   .contact-title {
-    font-size: clamp(32px, 13vw, 44px);
+    font-size: clamp(28px, 12vw, 40px);
   }
   .mobile-menu a {
-    font-size: 32px;
+    font-size: 30px;
   }
   .card-visual--portrait {
-    height: 360px;
+    height: 240px;
+  }
+  nav {
+    padding: 12px 16px;
+  }
+  .nav-logo {
+    font-size: 15px;
   }
 }
 
