@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIKHIL THATIPAMULA — Video Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,200;1,9..40,300&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Film progress bar -->
+    <div id="film-progress"></div>
+
+    <!-- Cursor -->
+    <div class="cursor cursor-dot" id="cursorDot"></div>
+    <div class="cursor cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav id="mainNav">
+      <a class="nav-logo" href="#" data-text="KIRA.NOVA"
+        >NIKHIL<span>.</span>THATIPAMULA</a
+      >
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#reel">Reel</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire me</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-tag">Video Editor & Colorist</div>
+        <h1 class="hero-title">
+          FRAMES<br />
+          <span class="line2">THAT</span><br />
+          <span class="line3">SPEAK</span>
+        </h1>
+        <p class="hero-desc">
+          Crafting cinematic narratives through the art of editing — where every
+          cut has purpose, every frame tells a story, and every second leaves an
+          impression.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">
+            View my work
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M1 7h12M7 1l6 6-6 6"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a href="#reel" class="btn-secondary">Watch the reel</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">2<span>+</span></div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="stat-num">240<span>+</span></div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+          <div>
+            <div class="stat-num">60<span>+</span></div>
+            <div class="stat-label">Clients till now</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-visual"></div>
+        <div class="video-mockup">
+          <div class="floating-tag tag-4k">4K / 120fps</div>
+          <div class="floating-tag tag-color">Color Grade</div>
+          <div class="floating-tag tag-vfx">VFX · Motion</div>
+          <div class="video-frame">
+            <div class="video-screen card-visual card-visual--landscape">
+              <iframe
+                class="hero-mockup-video"
+                src="https://drive.google.com/file/d/1WWm5PoEeUbIJAqawbPKbefPfPS7FoQ9p/preview"
+                allow="autoplay"
+                allowfullscreen
+              ></iframe>
+              <div class="film-grain"></div>
+              <!-- <div class="scene-elements">
+                <div class="play-icon"></div>
+              </div> -->
+            </div>
+            <div class="timeline-bar">
+              <div class="tl-header">
+                <span class="tl-time"><span>00:02:14</span> / 00:08:32</span>
+                <span class="tl-time">25 fps</span>
+              </div>
+              <div class="tl-tracks">
+                <div class="tl-track">
+                  <span class="tl-label">V1</span>
+                  <div class="tl-lane">
+                    <div class="tl-clip clip-v1"></div>
+                    <div class="tl-clip clip-v2"></div>
+                    <div class="tl-clip clip-v3"></div>
+                    <div class="tl-playhead"></div>
+                  </div>
+                </div>
+                <div class="tl-track">
+                  <span class="tl-label">A1</span>
+                  <div class="tl-lane">
+                    <div class="tl-clip clip-a1"></div>
+                    <div class="tl-clip clip-a2"></div>
+                  </div>
+                </div>
+                <div class="tl-track">
+                  <span class="tl-label">TXT</span>
+                  <div class="tl-lane">
+                    <div class="tl-clip clip-t1"></div>
+                    <div class="tl-clip clip-t2"></div>
+                    <div class="tl-clip clip-t3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip">
+      <div class="marquee-inner">
+        <div class="marquee-item">
+          Documentary <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Brand Films <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Music Videos <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Commercials <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Color Grading <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Motion Graphics <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          VFX Compositing <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Short Films <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Documentary <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Brand Films <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Music Videos <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Commercials <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Color Grading <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Motion Graphics <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          VFX Compositing <span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-item">
+          Short Films <span class="marquee-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about fade-up" id="about">
+      <div class="about-portrait fade-left">
+        <div class="portrait-bg">
+          <div class="portrait-frame"></div>
+          <div class="portrait-accent"></div>
+          <div class="portrait-number">KN</div>
+          <div class="portrait-icon">
+            <span class="camera-icon">🎬</span>
+            <div class="portrait-name">NIKHIL THATIPAMULA</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content fade-right">
+        <div class="section-label">About me</div>
+        <h2 class="section-title">STORY<br />TELLER</h2>
+        <p class="about-text">
+          I'm Nikhil Thatipamula — a
+          <strong>senior video editor and colorist</strong> with over 8 years
+          shaping raw footage into experiences audiences can't forget. I've
+          worked with
+          <strong
+            >global brands, indie filmmakers, and award-winning
+            directors</strong
+          >
+          across three continents.<br /><br />
+          My philosophy is simple: every cut should be invisible when it serves
+          the story and unforgettable when it defines a moment. I work across
+          <strong>DaVinci Resolve, Premiere Pro, and After Effects</strong>,
+          bringing a colorist's eye to every project.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-chip">DaVinci Resolve</div>
+          <div class="skill-chip">Premiere Pro</div>
+          <div class="skill-chip">After Effects</div>
+          <div class="skill-chip">Color Grading</div>
+          <div class="skill-chip">Sound Design</div>
+          <div class="skill-chip">Motion Graphics</div>
+          <div class="skill-chip">VFX Comp.</div>
+          <div class="skill-chip">4K / 8K</div>
+          <div class="skill-chip">Drone Footage</div>
+        </div>
+        <div class="awards-row">
+          <div class="award-item">
+            <div class="award-name">Sundance</div>
+            <div class="award-desc">Selection · 2023</div>
+          </div>
+          <div class="award-item">
+            <div class="award-name">Cannes</div>
+            <div class="award-desc">Bronze Lion · 2022</div>
+          </div>
+          <div class="award-item">
+            <div class="award-name">Vimeo</div>
+            <div class="award-desc">Staff Pick · 2024</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work fade-up" id="work">
+      <div class="work-header">
+        <div>
+          <div class="section-label">Selected work</div>
+          <h2 class="section-title">REEL</h2>
+        </div>
+        <a href="#" class="btn-secondary">View all projects →</a>
+      </div>
+      <div class="projects-grid">
+        <!-- LANDSCAPE: Kolkata blur — full width top row -->
+        <div class="project-card landscape-card">
+          <div class="card-visual card-visual--landscape">
+            <iframe
+              class="card-video"
+              src="https://drive.google.com/file/d/1bJrwOxHdRqP9z7W5aTepOOJis7cVfJsD/preview"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+            <div class="card-overlay">
+              <div>
+                <div class="card-category">Cinematic · 2024</div>
+                <div class="card-title-sm">KOLKATA TOUR</div>
+              </div>
+            </div>
+            <div class="card-accent-line al-gold"></div>
+          </div>
+          <div class="card-info">
+            <span class="card-meta">Landscape · 16:9</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </div>
+
+        <!-- PORTRAIT ROW: 3 portrait videos side by side -->
+        <div class="project-card portrait-card">
+          <div class="card-visual card-visual--portrait">
+            <iframe
+              class="card-video"
+              src="https://drive.google.com/file/d/15DdIsQUlKn93WLlMHQIJ94qp1g5iGLYu/preview"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+            <div class="card-overlay">
+              <div>
+                <div class="card-category">Short Film · 2024</div>
+                <div class="card-title-sm">FOREIGN</div>
+              </div>
+            </div>
+            <div class="card-accent-line al-red"></div>
+          </div>
+          <div class="card-info">
+            <span class="card-meta">Portrait · 9:16</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </div>
+
+        <div class="project-card portrait-card">
+          <div class="card-visual card-visual--portrait">
+            <iframe
+              class="card-video"
+              src="https://drive.google.com/file/d/1dEgvBva5l-c_LSlobyZc-xj2xKCJHPtb/preview"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+            <div class="card-overlay">
+              <div>
+                <div class="card-category">clothing brand - 2025</div>
+                <div class="card-title-sm">Clothing</div>
+              </div>
+            </div>
+            <div class="card-accent-line al-blue"></div>
+          </div>
+          <div class="card-info">
+            <span class="card-meta">Portrait · 9:16</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </div>
+
+        <div class="project-card portrait-card">
+          <div class="card-visual card-visual--portrait">
+            <iframe
+              class="card-video"
+              src="https://drive.google.com/file/d/1dc7g37L2n5FgpIrn18LHYJNPaY7aVswA/preview"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+            <div class="card-overlay">
+              <div>
+                <div class="card-category">Event · 2024</div>
+                <div class="card-title-sm">YUVA SANGAM</div>
+              </div>
+            </div>
+            <div class="card-accent-line al-violet"></div>
+          </div>
+          <div class="card-info">
+            <span class="card-meta">Portrait · 9:16</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </div>
+
+        <div class="project-card portrait-card">
+          <div class="card-visual card-visual--portrait">
+            <iframe
+              class="card-video"
+              src="https://drive.google.com/file/d/1hSNcJHAGCpsBRzsOh7K02VT_eEZCAW8y/preview"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+            <div class="card-overlay">
+              <div>
+                <div class="card-category">Promotions · 2025</div>
+                <div class="card-title-sm">Paytm Ads</div>
+              </div>
+            </div>
+            <div class="card-accent-line al-red"></div>
+          </div>
+          <div class="card-info">
+            <span class="card-meta">Portrait · 9:16</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </div>
+
+        <div class="project-card portrait-card">
+          <div class="card-visual card-visual--portrait">
+            <iframe
+              class="card-video"
+              src="https://drive.google.com/file/d/1bcVFdzCYs8JAh82-QZHxnASMHgEUOWMk/preview"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+            <div class="card-overlay">
+              <div>
+                <div class="card-category">Villa Promotion - 2025</div>
+                <div class="card-title-sm">Touring</div>
+              </div>
+            </div>
+            <div class="card-accent-line al-blue"></div>
+          </div>
+          <div class="card-info">
+            <span class="card-meta">Portrait · 9:16</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </div>
+
+        <div class="project-card portrait-card">
+          <div class="card-visual card-visual--portrait">
+            <iframe
+              class="card-video"
+              src="https://drive.google.com/file/d/18GlNdhSf9vy9nU5ryGNUQeVdZvrxSY4l/preview"
+              allow="autoplay"
+              allowfullscreen
+            ></iframe>
+            <div class="card-overlay">
+              <div>
+                <div class="card-category">Animaiton · 2024</div>
+                <div class="card-title-sm">Motion Graphics</div>
+              </div>
+            </div>
+            <div class="card-accent-line al-violet"></div>
+          </div>
+          <div class="card-info">
+            <span class="card-meta">Portrait · 9:16</span>
+            <div class="card-arrow">↗</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REEL -->
+    <section class="reel-section fade-up" id="reel">
+      <div class="section-label">Showreel 2024</div>
+      <h2 class="section-title">WATCH THE<br />REEL</h2>
+      <div class="reel-player">
+        <iframe
+          class="reel-video"
+          src="https://drive.google.com/file/d/1LobORJtqo3YqtHAdxLEGbzlh_CCahCTF/preview"
+          allow="autoplay"
+          allowfullscreen
+        ></iframe>
+        <div class="reel-orb reel-orb-1"></div>
+        <div class="reel-orb reel-orb-2"></div>
+        <div class="reel-orb reel-orb-3"></div>
+      </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <!-- <section class="clients fade-up">
+      <div class="clients-header">Trusted by world-class brands</div>
+      <div class="clients-logos">
+        <div class="client-logo">NIKE</div>
+        <div class="client-logo">APPLE</div>
+        <div class="client-logo">NETFLIX</div>
+        <div class="client-logo">SONY</div>
+        <div class="client-logo">A24</div>
+        <div class="client-logo">BBC</div>
+        <div class="client-logo">AUDI</div>
+      </div>
+    </section> -->
+
+    <!-- PROCESS -->
+    <section class="process fade-up" id="process">
+      <!-- <div class="section-label">My workflow</div> -->
+      <!-- <h2 class="section-title">HOW I<br />WORK</h2> -->
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-accent"></div>
+          <div class="step-num">01</div>
+          <div class="step-title">Discovery</div>
+          <p class="step-desc">
+            Deep dive into your vision, goals, and audience. Understanding the
+            story before I touch a single frame.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="step-accent"></div>
+          <div class="step-num">02</div>
+          <div class="step-title">Rough Cut</div>
+          <p class="step-desc">
+            Building the structural arc — pacing, rhythm, narrative flow. The
+            bones of the story come together here.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="step-accent"></div>
+          <div class="step-num">03</div>
+          <div class="step-title">Fine Cut</div>
+          <p class="step-desc">
+            Refining every transition, every breath, every beat. Sound design
+            and temp score aligned with emotion.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="step-accent"></div>
+          <div class="step-num">04</div>
+          <div class="step-title">Deliver</div>
+          <p class="step-desc">
+            Color grade, sound mix, delivery in all formats. Cinema, broadcast,
+            streaming — done right, every time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <!-- <section class="testimonials fade-up">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">WHAT<br />THEY SAY</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">
+            Kira has a rare gift — she doesn't just edit footage, she sculpts
+            time. Our documentary went from rough footage to something genuinely
+            moving in her hands.
+          </p>
+          <div class="quote-author">
+            <div class="author-avatar av-gold">RM</div>
+            <div>
+              <div class="author-name">RACHEL MOORE</div>
+              <div class="author-role">Director, Last Light Doc</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">
+            The Nike campaign Kira cut tripled our benchmark engagement. Her
+            instinct for pacing and energy is unmatched. We've worked with
+            editors at every level — she's in a different league.
+          </p>
+          <div class="quote-author">
+            <div class="author-avatar av-red">JK</div>
+            <div>
+              <div class="author-name">JAMES KWAN</div>
+              <div class="author-role">CD, Wieden+Kennedy</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">
+            Working with Kira on the Neon City short was a masterclass in
+            collaboration. She pushed the edit somewhere we'd never imagined —
+            and it earned us Sundance.
+          </p>
+          <div class="quote-author">
+            <div class="author-avatar av-blue">LT</div>
+            <div>
+              <div class="author-name">LEON TAVES</div>
+              <div class="author-role">Producer, A24</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- CONTACT -->
+    <section class="contact fade-up" id="contact">
+      <div class="section-label" style="justify-content: center">
+        Let's work together
+      </div>
+      <h2 class="contact-title">
+        <span style="-webkit-text-stroke: 0; color: var(--white)">LET'S</span>
+        <span>CREATE</span>
+        <span style="-webkit-text-stroke: 0; color: var(--white)"
+          >TOGETHER</span
+        >
+      </h2>
+      <a href="mailto:nikhilthatipamula2021@gmail.com" class="contact-email"
+        >nikhilthatipamula2021@gmail.com</a
+      >
+      <div class="contact-socials">
+        <a href="#" class="social-link">Vimeo</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">Behance</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-copy">
+        © 2024 Nikhil Thatipamula — All rights reserved
+      </div>
+      <div class="footer-avail">
+        <div class="avail-dot"></div>
+        Available for projects
+      </div>
+    </footer>
+
+    <script>
+      // Custom cursor
+      const dot = document.getElementById("cursorDot");
+      const ring = document.getElementById("cursorRing");
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+      });
+      function animateCursor() {
+        dot.style.left = mx + "px";
+        dot.style.top = my + "px";
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + "px";
+        ring.style.top = ry + "px";
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+      document
+        .querySelectorAll(
+          "a, button, .project-card, .process-step, .reel-play-btn",
+        )
+        .forEach((el) => {
+          el.addEventListener("mouseenter", () =>
+            ring.classList.add("hovered"),
+          );
+          el.addEventListener("mouseleave", () =>
+            ring.classList.remove("hovered"),
+          );
+        });
+
+      // Nav scroll
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("mainNav")
+          .classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      // Film progress bar
+      const filmProgress = document.getElementById("film-progress");
+      window.addEventListener("scroll", () => {
+        const pct =
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100;
+        filmProgress.style.width = pct + "%";
+      });
+
+      // Fade-up / fade-left / fade-right on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-up, .fade-left, .fade-right")
+        .forEach((el) => observer.observe(el));
+
+      // Section title clip-path reveal
+      const titleObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("revealed");
+          });
+        },
+        { threshold: 0.2 },
+      );
+      document
+        .querySelectorAll(".section-title")
+        .forEach((el) => titleObserver.observe(el));
+
+      // Hero title letter-by-letter animation
+      const heroTitle = document.querySelector(".hero-title");
+      if (heroTitle) {
+        let globalCharIdx = 0;
+        heroTitle.childNodes.forEach((node) => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.textContent;
+            const frag = document.createDocumentFragment();
+            [...text].forEach((ch) => {
+              if (ch === "\n" || ch.trim() === "") {
+                frag.appendChild(document.createTextNode(ch));
+                return;
+              }
+              const span = document.createElement("span");
+              span.className = "char";
+              span.textContent = ch;
+              span.style.animationDelay = globalCharIdx * 0.045 + 0.25 + "s";
+              globalCharIdx++;
+              frag.appendChild(span);
+            });
+            node.replaceWith(frag);
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            const el = node;
+            const text = el.textContent;
+            el.textContent = "";
+            [...text].forEach((ch) => {
+              const span = document.createElement("span");
+              span.className = "char";
+              span.textContent = ch;
+              span.style.animationDelay = globalCharIdx * 0.045 + 0.25 + "s";
+              globalCharIdx++;
+              el.appendChild(span);
+            });
+          }
+        });
+      }
+
+      // Skill chips stagger
+      const chipObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target
+                .querySelectorAll(".skill-chip")
+                .forEach((chip, i) => {
+                  setTimeout(() => chip.classList.add("chip-visible"), i * 60);
+                });
+              chipObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+      const skillsGrid = document.querySelector(".skills-grid");
+      if (skillsGrid) chipObserver.observe(skillsGrid);
+
+      // Stat counter animation
+      function animateCount(el, target, duration) {
+        let start = 0;
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const progress = Math.min((timestamp - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target);
+          if (progress < 1) requestAnimationFrame(step);
+          else el.textContent = target;
+        };
+        requestAnimationFrame(step);
+      }
+      const statObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.querySelectorAll(".stat-num").forEach((el) => {
+                const suffix = el.querySelector("span");
+                const suffixText = suffix ? suffix.textContent : "";
+                const raw = el.textContent.replace(suffixText, "").trim();
+                const target = parseInt(raw);
+                if (!isNaN(target)) {
+                  el.textContent = "0";
+                  if (suffixText) {
+                    const s = document.createElement("span");
+                    s.textContent = suffixText;
+                    el.appendChild(s);
+                  }
+                  animateCount(el.childNodes[0] || el, target, 1200);
+                }
+              });
+              statObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      const heroStats = document.querySelector(".hero-stats");
+      if (heroStats) statObserver.observe(heroStats);
+
+      // Reel waveform bars
+      const wave = document.getElementById("reelWave");
+      if (wave) {
+        for (let i = 0; i < 28; i++) {
+          const bar = document.createElement("div");
+          bar.className = "wave-bar";
+          const h = Math.random() * 28 + 4;
+          bar.style.height = h + "px";
+          bar.style.animationDelay = Math.random() * 1.2 + "s";
+          bar.style.animationDuration = 0.8 + Math.random() * 0.8 + "s";
+          wave.appendChild(bar);
+        }
+      }
+
+      // Contact title flicker
+      const contactTitle = document.querySelector(".contact-title");
+      if (contactTitle) {
+        const contactObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                let delay = 0;
+                contactTitle.childNodes.forEach((node) => {
+                  if (
+                    node.nodeType === Node.TEXT_NODE &&
+                    node.textContent.trim()
+                  ) {
+                    const text = node.textContent;
+                    const frag = document.createDocumentFragment();
+                    [...text].forEach((ch) => {
+                      if (ch === "\n") {
+                        frag.appendChild(document.createTextNode(ch));
+                        return;
+                      }
+                      const span = document.createElement("span");
+                      span.className = "flicker";
+                      span.textContent = ch === " " ? "\u00A0" : ch;
+                      span.style.animationDelay = delay + "s";
+                      delay += 0.05;
+                      frag.appendChild(span);
+                    });
+                    node.replaceWith(frag);
+                  }
+                });
+                contactObserver.unobserve(contactTitle);
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+        contactObserver.observe(contactTitle);
+      }
+    </script>
+  </body>
+</html>
