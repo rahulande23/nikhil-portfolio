@@ -41,15 +41,14 @@
     </nav>
 
     <!-- MOBILE MENU -->
-    <!-- <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu">
       <a href="#about" class="mobile-nav-link">About</a>
       <a href="#work" class="mobile-nav-link">Work</a>
       <a href="#reel" class="mobile-nav-link">Reel</a>
       <a href="#process" class="mobile-nav-link">Process</a>
       <a href="#contact" class="mobile-nav-link">Contact</a>
       <a href="#contact" class="mobile-cta">Hire me</a>
-    </div> -->
-
+    </div>
     <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
@@ -638,22 +637,24 @@
       // Mobile menu
       const hamburger = document.getElementById("navHamburger");
       const mobileMenu = document.getElementById("mobileMenu");
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("open");
-        mobileMenu.classList.toggle("open");
-        document.body.style.overflow = mobileMenu.classList.contains("open")
-          ? "hidden"
-          : "";
-      });
-      document
-        .querySelectorAll(".mobile-nav-link, .mobile-cta")
-        .forEach((link) => {
-          link.addEventListener("click", () => {
-            hamburger.classList.remove("open");
-            mobileMenu.classList.remove("open");
-            document.body.style.overflow = "";
-          });
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("open");
+          mobileMenu.classList.toggle("open");
+          document.body.style.overflow = mobileMenu.classList.contains("open")
+            ? "hidden"
+            : "";
         });
+        document
+          .querySelectorAll(".mobile-nav-link, .mobile-cta")
+          .forEach((link) => {
+            link.addEventListener("click", () => {
+              hamburger.classList.remove("open");
+              mobileMenu.classList.remove("open");
+              document.body.style.overflow = "";
+            });
+          });
+      }
 
       // Film progress bar
       const filmProgress = document.getElementById("film-progress");
