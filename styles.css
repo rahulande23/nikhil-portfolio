@@ -1377,57 +1377,79 @@ footer {
   background: var(--mid);
 }
 
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — TABLET (≤ 1024px)
+═══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
+  /* NAV */
+  nav {
+    padding: 18px 32px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    display: none;
+  }
+
+  /* HERO */
   .hero {
     grid-template-columns: 1fr;
+    padding-top: 100px;
   }
   .hero-right {
     display: none;
   }
   .hero-left {
-    padding: 60px 40px;
+    padding: 60px 48px 80px;
   }
+
+  /* SECTIONS */
   section {
-    padding: 80px 40px;
+    padding: 80px 48px;
   }
+
+  /* ABOUT */
   .about {
     grid-template-columns: 1fr;
     gap: 48px;
   }
   .about-portrait {
-    max-width: 300px;
+    max-width: 320px;
   }
+
+  /* WORK */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-card.landscape-card {
+    grid-column: span 2;
+  }
+  .project-card.portrait-card {
+    grid-column: span 1;
+  }
+
+  /* PROCESS */
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-  .project-card.landscape-card,
-  .project-card.portrait-card {
-    grid-column: span 3;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  nav {
-    padding: 20px 24px;
-  }
-  .nav-links {
-    display: none;
-  }
-  footer {
-    padding: 20px 40px;
-  }
-  .clients {
-    padding: 60px 40px;
-  }
+
+  /* REEL */
   .reel-section {
-    padding: 80px 40px;
+    padding: 80px 48px;
   }
+
+  /* CONTACT */
   .contact {
-    padding: 80px 40px;
+    padding: 80px 48px;
   }
+
+  /* FOOTER */
+  footer {
+    padding: 20px 48px;
+  }
+
+  /* SKILLS */
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
