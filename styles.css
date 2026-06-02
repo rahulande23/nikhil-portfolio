@@ -860,6 +860,7 @@ section {
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .project-card.landscape-card,
@@ -868,11 +869,11 @@ section {
   }
 
   .card-visual--portrait {
-    height: 600px;
-  }
-
-  .card-visual--landscape {
-    aspect-ratio: 16/9;
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    height: auto;
   }
 }
 
@@ -915,7 +916,7 @@ section {
 .bg-gold {
   background: linear-gradient(135deg, #2a2100 0%, #1a1500 40%, #0d0b00 100%);
 }
-.bg-red {
+.projects-grid .bg-red {
   background: linear-gradient(135deg, #200a00 0%, #140600 40%, #080300 100%);
 }
 .bg-blue {
@@ -2315,9 +2316,6 @@ footer {
   }
   .mobile-menu a {
     font-size: 30px;
-  }
-  .card-visual--portrait {
-    height: 240px;
   }
   nav {
     padding: 12px 16px;
