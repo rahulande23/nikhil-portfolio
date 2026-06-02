@@ -851,8 +851,29 @@ section {
 .card-visual--landscape {
   aspect-ratio: 16/9;
 }
+
 .card-visual--portrait {
   aspect-ratio: 9/16;
+  min-height: 520px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.landscape-card,
+  .project-card.portrait-card {
+    grid-column: span 1;
+  }
+
+  .card-visual--portrait {
+    height: 600px;
+  }
+
+  .card-visual--landscape {
+    aspect-ratio: 16/9;
+  }
 }
 
 .card-bg {
@@ -863,11 +884,32 @@ section {
 .project-card:hover .card-bg {
   transform: scale(1.04);
 }
-.card-video {
+/* LANDSCAPE VIDEOS */
+.card-visual--landscape iframe {
   width: 100%;
   height: 100%;
-  display: block;
-  border: none;
+}
+
+/* PORTRAIT VIDEOS */
+.card-visual--portrait iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero video */
+.hero-mockup-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Reel video */
+.reel-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .bg-gold {
